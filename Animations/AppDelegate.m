@@ -10,7 +10,7 @@
 #import "UIViewController+RuntimeReplace.h"
 #import "AnimationsListController.h"
 #import "AnimationsListViewNavigationController.h"
-
+#define Funcname(objc,func)   @(((objc.func),#func))
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -23,6 +23,7 @@
      Email: YouXianMing1987@iCloud.com
      
      */
+    NSLog(@"%@", Funcname(self, window));
     
 #ifdef DEBUG
     
